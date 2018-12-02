@@ -31,13 +31,6 @@ const Item = styled.li`
   a {
     font-weight: 600;
     transition: all 0.2s;
-    color: ${props => props.theme.colors.base};
-    &:hover {
-      color: ${props => props.theme.colors.highlight};
-    }
-    &:visited {
-      color: ${props => props.theme.colors.base};
-    }
   }
 `
 
@@ -46,32 +39,19 @@ const Footer = () => (
     <List>
       <Item>
         <a
-          href="https://www.contentful.com/"
-          rel="nofollow noopener noreferrer"
-          target="_blank"
-        >
-          <img
-            src="https://images.ctfassets.net/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-            style={{ width: '100px' }}
-            alt="Powered by Contentful"
-          />
-        </a>
-      </Item>
-      <Item>
-        <a
-          href="https://github.com/ryanwiemer/gatsby-starter-gcn"
+          href="https://github.com/pheep/pheep-me-gatsby"
           target="_blank"
           rel="noopener noreferrer"
         >
-          gatsby-starter-gcn
+          pheep-me-gatsby
         </a>{' '}
         by{' '}
         <a
-          href="https://github.com/ryanwiemer"
+          href="https://github.com/pheep"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @ryanwiemer
+          @pheep
         </a>
       </Item>
     </List>

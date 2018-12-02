@@ -100,6 +100,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    color: ${theme.colors.primary};
+  }
+  a:visited {
+    color: ${theme.colors.used};
+  }
+  a:hover {
     color: ${theme.colors.highlight};
   }
 

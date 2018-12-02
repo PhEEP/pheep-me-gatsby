@@ -16,6 +16,7 @@ const theme = {
     tertiary: lighten(0.85, richBlack), // Light Gray
     highlight: turquoise, // Light Blue
     accent: ruby,
+    used: slateBlue,
   },
   sizes: {
     maxWidth: '1050px',

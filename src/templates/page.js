@@ -19,10 +19,8 @@ const PageTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} pageSEO />
-      <Container $fluid>
-        <Img fluid={heroImage.fluid} />
-      </Container>
       <Container>
+        <Img fluid={heroImage.fluid} />
         <PageTitle>{title}</PageTitle>
         <PageBody body={body} />
       </Container>
@@ -41,10 +39,14 @@ export const query = graphql`
         }
       }
       heroImage {
-        fluid(maxWidth: 1800) {
+        fluid {
+          base64
           tracedSVG
+          aspectRatio
           src
+          srcSet
           srcWebp
+          srcSetWebp
           sizes
         }
       }
