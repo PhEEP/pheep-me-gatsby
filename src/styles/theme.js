@@ -13,7 +13,7 @@ const theme = {
     base: richBlack, //'#121212', // Black
     primary: violet,
     secondary: lighten(0.2, richBlack), // Medium Gray
-    tertiary: lighten(0.8, richBlack), // Light Gray
+    tertiary: lighten(0.85, richBlack), // Light Gray
     highlight: turquoise, // Light Blue
     accent: ruby,
   },

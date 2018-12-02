@@ -94,7 +94,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata
           ret.allMarkdownRemark = ref.query.allMarkdownRemark
-          ret.generator = 'GatsbyJS GCN Starter'
+          ret.generator = 'Pheep Ego Web'
           return ret
         },
         query: `
@@ -162,6 +162,8 @@ module.exports = {
         color: config.themeColor,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     'gatsby-plugin-netlify',
   ],
 }

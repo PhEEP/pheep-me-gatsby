@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: 'Ego Pheep',
-  siteTitleAlt: 'Pheep is Me', // This allows an alternative site title for SEO schema.
+  siteTitleAlt: 'ego-pheep-me', // This allows an alternative site title for SEO schema.
   publisher: 'Pheep.me', // Organization name used for SEO schema
   siteDescription: 'Web development, creatcive coding, art, fun, games, etc.',
   siteUrl: 'https://pheep.me', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
