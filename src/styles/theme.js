@@ -5,7 +5,7 @@ export const turquoise = `#59f7c2`
 export const slateBlue = `#6369d1`
 export const ruby = `#d81159`
 export const seashell = `#f9f3ed`
-export const richBlack = `#0a122a`
+export const richBlack = `#12021f`
 
 const theme = {
   colors: {

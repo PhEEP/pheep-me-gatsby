@@ -37,11 +37,6 @@ export const query = graphql`
           content
         }
       }
-      heroImage {
-        fluid{
-
-        }
-      }
       body {
         childMarkdownRemark {
           html

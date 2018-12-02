@@ -14,7 +14,7 @@ module.exports = {
   shareImage: '/logos/share.jpg', // Open Graph Default Share Image. 1200x1200 is recommended
   shareImageWidth: 1024, // Change to the width of your default share image
   shareImageHeight: 512, // Change to the height of your default share image
-  siteLogo: '/logos/logo-512.png', // Logo used for SEO, RSS, and App manifest
+  siteLogo: '/logos/logo-512.jpg', // Logo used for SEO, RSS, and App manifest
   backgroundColor: '#0a122a', // Used for Offline Manifest
   themeColor: '#8e00ba', // Used for Offline Manifest
   copyright: 'Copyright © 2018 GCN User', // Copyright string for the RSS feed
