@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import theme from './theme'
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Arvo:700|Comfortaa:300,400,700');
@@ -83,7 +84,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: white;
+    background: ${theme.colors.base};
+    color: ${theme.colors.stroke};
     line-height: 1;
     font-size: 100%;
     font-variant-ligatures: none;
@@ -92,8 +94,13 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-family: 'Comfortaa', cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
+
   h6, h5, h4, h3, h2, h1 {
     font-family: 'Arvo', serif;
+  }
+
+  a {
+    color: ${theme.colors.highlight};
   }
 
   img {

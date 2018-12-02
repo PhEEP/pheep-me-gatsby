@@ -1,3 +1,5 @@
+import { lighten } from 'polished'
+
 export const violet = `#8e00ba`
 export const turquoise = `#59f7c2`
 export const slateBlue = `#6369d1`
@@ -7,10 +9,13 @@ export const richBlack = `#0a122a`
 
 const theme = {
   colors: {
+    stroke: seashell,
     base: richBlack, //'#121212', // Black
-    secondary: '#e9e9e9', // Medium Gray
-    tertiary: '#f3f3f3', // Light Gray
-    highlight: '#5b8bf7', // Light Blue
+    primary: violet,
+    secondary: lighten(0.2, richBlack), // Medium Gray
+    tertiary: lighten(0.8, richBlack), // Light Gray
+    highlight: turquoise, // Light Blue
+    accent: ruby,
   },
   sizes: {
     maxWidth: '1050px',
