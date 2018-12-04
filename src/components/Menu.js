@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import theme from '../styles/theme'
 
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
+  /* background: ${props => props.theme.colors.base};
   width: 100%;
-  padding: 1.5em 0;
+  padding: 1.5em 0; */
 `
 const Nav = styled.nav`
-  width: 100%;
+  /* width: 100%;
   max-width: ${props => props.theme.sizes.maxWidth};
   margin: 0 auto;
   padding: 0 1.5em;
@@ -33,15 +34,15 @@ const Nav = styled.nav`
     color: DarkGray;
     font-weight: 600;
     transition: all 0.2s;
-    border-bottom: 2px solid ${props => props.theme.colors.base};
+    border-bottom: 2px solid ${props => props.theme.colors.stroke};
     &:hover {
       color: white;
     }
-  }
+  } */
 `
 
 const activeLinkStyle = {
-  color: 'white',
+  backgroundColor: theme.colors.highlight,
 }
 
 const Menu = () => {

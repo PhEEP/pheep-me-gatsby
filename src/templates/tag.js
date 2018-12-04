@@ -64,6 +64,7 @@ const TagTemplate = ({ data, pageContext }) => {
   )
 }
 
+// $slug is passed in from createPage()
 export const query = graphql`
   query($slug: String!) {
     contentfulTag(slug: { eq: $slug }) {

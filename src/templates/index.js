@@ -10,6 +10,9 @@ import SEO from '../components/SEO'
 import config from '../utils/siteConfig'
 
 const Index = ({ data, pageContext }) => {
+  const homeContent =
+    data.homeContent.edges[0].node.body.childMarkdownRemark.html
+  console.log('homeContent ', homeContent)
   const posts = data.allContentfulPost.edges
   const featuredPost = posts[0].node
   const { currentPage } = pageContext
@@ -25,12 +28,15 @@ const Index = ({ data, pageContext }) => {
       )}
       <Container>
         {isFirstPage ? (
-          <CardList>
-            <Card {...featuredPost} featured />
-            {posts.slice(1).map(({ node: post }) => (
-              <Card key={post.id} {...post} />
-            ))}
-          </CardList>
+          <>
+            <div dangerouslySetInnerHTML={{ __html: homeContent }} />
+            <CardList>
+              <Card {...featuredPost} featured />
+              {posts.slice(1).map(({ node: post }) => (
+                <Card key={post.id} {...post} />
+              ))}
+            </CardList>
+          </>
         ) : (
           <CardList>
             {posts.map(({ node: post }) => (
@@ -46,6 +52,22 @@ const Index = ({ data, pageContext }) => {
 
 export const query = graphql`
   query($skip: Int!, $limit: Int!) {
+    homeContent: allContentfulPage(filter: { slug: { eq: "home-page" } }) {
+      edges {
+        node {
+          id
+          title
+          slug
+          body {
+            id
+            childMarkdownRemark {
+              id
+              html
+            }
+          }
+        }
+      }
+    }
     allContentfulPost(
       sort: { fields: [publishDate], order: DESC }
       limit: $limit

@@ -19,6 +19,7 @@ const PostTemplate = ({ data, pageContext }) => {
     body,
     publishDate,
     tags,
+    video,
   } = data.contentfulPost
   const postNode = data.contentfulPost
 
@@ -33,8 +34,12 @@ const PostTemplate = ({ data, pageContext }) => {
       <SEO pagePath={slug} postNode={postNode} postSEO />
 
       <Hero title={title} image={heroImage} height={'50vh'} />
-
       <Container>
+        {video ? (
+          <video controls muted src={video.file.url}>
+            Sorry, your browser doesn't support embedded videos.
+          </video>
+        ) : null}
         {tags && <TagList tags={tags} />}
         <PostDate date={publishDate} />
         <PageBody body={body} />
@@ -70,6 +75,15 @@ export const query = graphql`
           src
           width
           height
+        }
+      }
+      video {
+        id
+        title
+        file {
+          url
+          fileName
+          contentType
         }
       }
       body {

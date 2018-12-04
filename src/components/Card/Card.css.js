@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Post = styled.li`
-  position: relative;
+  /* position: relative;
   border: 1px solid ${props => props.theme.colors.secondary};
   border-radius: 2px;
   margin: 0 0 1em 0;
@@ -22,7 +22,6 @@ export const Post = styled.li`
     flex-flow: column;
     height: 100%;
     width: 100%;
-    /* color: ${props => props.theme.colors.base}; */
     text-decoration: none;
     .gatsby-image-wrapper {
       height: 0;
@@ -31,22 +30,22 @@ export const Post = styled.li`
         padding-bottom: ${props => (props.featured ? '40%' : '60%')};
       }
     }
-  }
+  } */
 `
 
 export const Title = styled.h2`
-  font-size: 1.5em;
+  /* font-size: 1.5em;
   font-weight: 600;
   text-transform: capitalize;
-  margin: 1rem 1rem 0.5rem 1rem;
+  margin: 1rem 1rem 0.5rem 1rem; */
 `
 
 export const Date = styled.h3`
-  margin: 0 1rem 1.5rem 1rem;
-  color: gray;
+  /* margin: 0 1rem 1.5rem 1rem;
+  color: gray; */
 `
 
 export const Excerpt = styled.p`
-  margin: 0 1rem 1rem 1rem;
-  line-height: 1.6;
+  /* margin: 0 1rem 1rem 1rem;
+  line-height: 1.6; */
 `

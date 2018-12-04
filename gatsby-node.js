@@ -1,9 +1,14 @@
 const config = require('./src/utils/siteConfig')
 const path = require(`path`)
 
+// loops through posts, pages, tags
+// gets slugs and passes the slug to each template
+// each template then uses that slug to fetch
+// associated data and feeds it into the template
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
+  // gets all posts from contentful in descending order
   const loadPosts = new Promise((resolve, reject) => {
     graphql(`
       {
